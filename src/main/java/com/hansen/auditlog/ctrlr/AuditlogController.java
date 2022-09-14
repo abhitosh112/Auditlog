@@ -34,10 +34,10 @@ public class AuditlogController {
 		ResponseEntity<Object> mpResponse = null;
 
 		//TODO fill in code
-		Object add=auditSrvc.create(inputentity);
-		if(add!=null)
+		Object auditLog=auditSrvc.create(inputentity);
+		if(auditLog!=null)
 		{
-			mpResponse=new ResponseEntity<Object>(add,null,HttpStatus.CREATED);
+			mpResponse=new ResponseEntity<Object>(auditLog,null,HttpStatus.CREATED);
 			return mpResponse;	
 		}
 		else
@@ -55,15 +55,15 @@ public class AuditlogController {
 		
 		//TODO fill in code
 		 
-		Object getid=auditSrvc.read(id);
-         if(getid==null)
+		Object auditId=auditSrvc.read(id);
+         if(auditId==null)
          {
         	 mpResponse=new ResponseEntity<Object>("id not present",null,HttpStatus.NOT_FOUND);
         	 return mpResponse;
          }
          else
          {
-        	 mpResponse=new ResponseEntity<Object>(getid,null,HttpStatus.OK);
+        	 mpResponse=new ResponseEntity<Object>(auditId,null,HttpStatus.OK);
         	 return mpResponse; 
          }
 }
@@ -75,16 +75,16 @@ public class AuditlogController {
 		ResponseEntity<Object> mpResponsee = null;
 		//TODO fill in code
 		
-		Iterable<Auditlog>getall=auditSrvc.readAll();
-		Iterator<Auditlog>itrr=getall.iterator();
-		if(itrr.hasNext()==true)
+		Iterable<Auditlog>auditListAll=auditSrvc.readAll();
+		Iterator<Auditlog>iterator=auditListAll.iterator();
+		if(iterator.hasNext()==true)
 		{
-			mpResponse=new ResponseEntity<Object>(getall,null,HttpStatus.OK);
+			mpResponse=new ResponseEntity<Object>(auditListAll,null,HttpStatus.OK);
 			return mpResponse;
 		}
 		else
 		{
-			mpResponsee=new ResponseEntity<Object>("no plan",null,HttpStatus.NOT_FOUND);
+			mpResponsee=new ResponseEntity<Object>("No plan",null,HttpStatus.NOT_FOUND);
 			return mpResponsee;
 		}
 		

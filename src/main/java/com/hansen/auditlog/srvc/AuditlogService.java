@@ -18,8 +18,8 @@ public class AuditlogService {
 	public Object create(Auditlog entity) {
 
 		//TODO fill in code
-		Auditlog addd=auditlogDao.save(entity);
-		return addd;
+		Auditlog auditlog=auditlogDao.save(entity);
+		return auditlog;
 		
 		
 	}
@@ -27,10 +27,10 @@ public class AuditlogService {
 	public Object read(Long id) {
 		
 		//TODO fill in code
-		Optional<Auditlog> gett = auditlogDao.findById(id);
-		if(gett.isPresent())
+		Optional<Auditlog> auditList = auditlogDao.findById(id);
+		if(auditList.isPresent())
 		{
-			 return gett;
+			 return auditList;
 		}
 		else
 		{
@@ -42,8 +42,8 @@ public class AuditlogService {
 		
 		
 		//TODO fill in code
-		Iterable<Auditlog> gettall=auditlogDao.findAll();
-		return gettall;
+		Iterable<Auditlog> auditListAll=auditlogDao.findAll();
+		return auditListAll;
 		
 		
 		
