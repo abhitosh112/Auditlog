@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.hansen.auditlog.dao.AuditlogDao;
 import com.hansen.auditlog.model.Auditlog;
-import com.hansen.mobileplan.model.MobilePlan;
+//import com.hansen.mobileplan.model.MobilePlan;
 
 @Service
 public class AuditlogService {
