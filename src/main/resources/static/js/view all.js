@@ -16,11 +16,11 @@
 			var td1=document.createElement('td');
 			td1.innerHTML=currentElement.id;
 			var td2=document.createElement('td');
-			td2.innerHTML=currentElement.name;
+			td2.innerHTML=currentElement.operationType;
 			var td3=document.createElement('td');
-			td3.innerHTML=currentElement.description;
+			td3.innerHTML=currentElement.entityJson;
 			var td4=document.createElement('td');
-			td4.innerHTML=currentElement.validity;
+			td4.innerHTML=currentElement.modificationDate;
 			
 			tr.appendChild(td1);
 			tr.appendChild(td2);

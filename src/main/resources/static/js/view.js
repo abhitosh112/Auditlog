@@ -29,11 +29,11 @@
 						var td1=document.createElement('td');
 						td1.innerHTML=mobilePlans[i].id;
 						var td2=document.createElement('td');
-						td2.innerHTML=mobilePlans[i].name;
+						td2.innerHTML=mobilePlans[i].operationType;
 						var td3=document.createElement('td');
-						td3.innerHTML=mobilePlans[i].description;
+						td3.innerHTML=mobilePlans[i].entityJson;
 						var td4=document.createElement('td');
-						td4.innerHTML=mobilePlans[i].validity;
+						td4.innerHTML=mobilePlans[i].modificationDate;
 				
 				
 						tr.appendChild(td1);
