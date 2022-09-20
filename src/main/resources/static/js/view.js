@@ -1,9 +1,11 @@
-	
-	//testing for git hub
+//testing for git hub
 	
 	function getBYID()
      {
 			console.log("outside");
+			var x=document.getElementById('table-head-view')
+			x.innerHTML='<tr><th scope="col">ID</th><th scope="col">NAME</th><th scope="col">DESCRIPTION</th><th scope="col">VALIDITY</th></tr>';
+	    
 			var userid =document.getElementById('id').value;
 			
 			if(userid.length!=0)
@@ -34,7 +36,7 @@
 						td3.innerHTML=mobilePlans[i].entityJson;
 						var td4=document.createElement('td');
 						td4.innerHTML=mobilePlans[i].modificationDate;
-				
+						
 				
 						tr.appendChild(td1);
 						tr.appendChild(td2);

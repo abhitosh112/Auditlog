@@ -5,8 +5,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>View All Page</title>
-  <link rel="icon" href="images/auditicon.png" type="image/x-icon">
+  <title>Auditlog View All Page</title>
+  <link rel = "icon" href = "images/auditicon.png" type = "image/x-icon">
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -37,7 +37,7 @@
 
           <a href="index.html" class="btn btn-sm btn-outline-primary ml-lg-4">Home</a>
           <a href="view.html" class="btn btn-sm btn-outline-primary ml-lg-4">View</a>
-          <a href="view all.html" class="btn btn-sm btn-outline-primary ml-lg-4">View All</a>
+          <a href="view all.html"  class="btn btn-sm btn-outline-primary ml-lg-4">View All</a>
         </ul>
         
       </div>
@@ -47,7 +47,8 @@
 
 <!-- details page -->
 <section class="pt-5">
-  <div class="container shadow section-sm rounded" style="background:#fce303;">
+  <div class="back-image container shadow section-sm rounded">
+    <!-- style="background:#fce303;"> -->
     <div class="row">
 
       
@@ -56,14 +57,19 @@
     </div>
 
     <table class="table table-bordered border-dark">
-      <thead>
-        <tr>
-       <th scope="col">ID</th>
-      	<th scope="col">OERATION TYPE</th>
-      	<th scope="col">ENTITY JSON</th>
-      	<th scope="col">MODIFICATION DATE</th>
-        </tr>
+      <thead id="table-head">
+
       </thead>
+      <!-- <thead>
+        <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">VALIDITY</th>
+        <th scope="col">ACTIONS</th>
+       <th scope="col">UPDATE</th>
+        </tr>
+      </thead> -->
       <tbody>
 
       </tbody>
@@ -100,8 +106,7 @@
 <script src="plugins/match-height/jquery.matchHeight-min.js"></script>
 
 <script src="js/view all.js"></script>
-<script src="js/delete.js"></script>
-<script src="js/edit.js"></script>
+
 <!-- Main Script -->
 <script src="js/script.js"></script>
 

@@ -1,11 +1,14 @@
-
-		var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 		xhr.open("GET","http://localhost:8081/audit");
 		xhr.send();
 		 
 		xhr.onload = function(){
 		var d=JSON.parse(xhr.response);
-		console.log(d);		
+		console.log(d);
+		
+		var x=document.getElementById('table-head')	
+	    x.innerHTML='<tr><th scope="col">ID1</th><th scope="col">NAME</th><th scope="col">DESCRIPTION</th><th scope="col">VALIDITY</th></tr>';
+	    
 	    
 	    var tbody=document.querySelector('.table > tbody')
 	     
@@ -21,6 +24,8 @@
 			td3.innerHTML=currentElement.entityJson;
 			var td4=document.createElement('td');
 			td4.innerHTML=currentElement.modificationDate;
+
+			
 			
 			tr.appendChild(td1);
 			tr.appendChild(td2);
@@ -30,4 +35,3 @@
 		
 		});
 		}
-	 
