@@ -4,7 +4,7 @@
      {
 			console.log("outside");
 			var x=document.getElementById('table-head-view')
-			x.innerHTML='<tr><th scope="col">ID</th><th scope="col">NAME</th><th scope="col">DESCRIPTION</th><th scope="col">VALIDITY</th></tr>';
+			x.innerHTML='<tr><th scope="col">PLAN ID</th><th scope="col">NAME</th><th scope="col">DESCRIPTION</th><th scope="col">VALIDITY</th></tr>';
 	    
 			var userid =document.getElementById('id').value;
 			

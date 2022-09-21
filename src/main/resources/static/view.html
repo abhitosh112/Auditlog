@@ -53,23 +53,7 @@
     <!-- style="background:#fce303;"> -->
     <div class="row">
     </div>
- <!--table for view id -->
- 
- <table class="table table-bordered border-dark">
-  <thead id="table-head-view">
-    <!-- <tr>
-      <th scope="col">ID</th>
-      <th scope="col">NAME</th>
-      <th scope="col">DESCRIPTION</th>
-      <th scope="col">VALIDITY</th>
-      <th scope="col">ACTIONS</th>
-      <th scope="col">UPDATE</th>
-    </tr> -->
-  </thead>
-  <tbody>
- 
-  </tbody>
-</table>   
+  
 	
       
    <section class="section pb-0">
@@ -85,11 +69,14 @@
             <form>
 
               <div class="form-group">
-                <label for="inputAddress">ID</label>
-                <input type="number" class="form-control" id="id" placeholder="">
+                <label for="inputAddress">PLAN ID</label>
+                <label class="required">*</label>
+                <input type="number" class="form-control" id="id" placeholder="Enter plan id here" required>
               </div>
   
+              <div class="align-center">
               <button type="button" class="btn btn-primary" onclick="getBYID()"style="margin: 30px;">Search MobilePlan</button>
+              </div>
             </form>
           </div>
           </div>
@@ -97,6 +84,26 @@
         </div>
       </div>
     </section>
+    
+     <!--table for view id -->
+ <div class="table-space">
+ <table class="table table-bordered border-dark">
+  <thead id="table-head-view">
+    <!-- <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">VALIDITY</th>
+      <th scope="col">ACTIONS</th>
+      <th scope="col">UPDATE</th>
+    </tr> -->
+  </thead>
+  <tbody>
+ 
+  </tbody>
+</table>
+ </div> 
+
   </div>
 </section>
 <!-- /details page -->
