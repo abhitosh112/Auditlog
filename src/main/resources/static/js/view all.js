@@ -7,7 +7,7 @@ var xhr = new XMLHttpRequest();
 		console.log(d);
 		
 		var x=document.getElementById('table-head')	
-	    x.innerHTML='<tr><th scope="col">PLAN ID</th><th scope="col">NAME</th><th scope="col">DESCRIPTION</th><th scope="col">VALIDITY</th></tr>';
+	    x.innerHTML='<tr><th scope="col">LOG ID</th><th scope="col">OPERATION-TYPE</th><th scope="col">ENTITY-JSON</th><th scope="col">MODIFICATION-DATE</th></tr>';
 	    
 	    
 	    var tbody=document.querySelector('.table > tbody')
