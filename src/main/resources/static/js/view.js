@@ -4,6 +4,7 @@
      {
 			console.log("outside");
 			var type =document.getElementById('optype').value;
+			type=type.toUpperCase();
 			
 			if(type.length!=0)
 			{
