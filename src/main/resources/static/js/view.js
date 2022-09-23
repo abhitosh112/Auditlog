@@ -66,7 +66,7 @@
 				}
 			else
 			{
-				alert("Please Enter Valid OPERATION-TYPE");
+				alert("Please enter valid OPERATION-TYPE");
 			}
 			
    	}			
