@@ -71,11 +71,16 @@
               <div class="form-group">
                 <label for="inputAddress">OPERATION-TYPE</label>
                 <label class="required">*</label>
-                <input type="text" class="form-control" id="optype" placeholder="Enter operation-type here" required>
+                <select class="form-control" name="Operation" id="optype" style="height: 40px;">
+                  <option value="CREATED">CREATE</option>
+                  <option value="UPDATED">UPDATE</option>
+                  <option value="DELETED">DELETE</option>
+                </select>
+                <!-- <input type="text" class="form-control" id="optype" placeholder="Enter operation-type here" required> -->
               </div>
   
               <div class="align-center">
-              <button type="button" class="btn btn-primary" onclick="getBYID()"style="margin: 30px;">Search Logs</button>
+              <button type="button" class="btn btn-primary" onclick="getBYID()"style="margin:5px;">Search Logs</button>
               </div>
             </form>
           </div>
