@@ -4,7 +4,7 @@ var xhr = new XMLHttpRequest();
 		 
 		xhr.onload = function(){
 		var d=JSON.parse(xhr.response);
-		console.log(d);
+		//console.log(d);
 		
 		var x=document.getElementById('table-head')	
 	    x.innerHTML='<tr><th scope="col">LOG ID</th><th scope="col">OPERATION-TYPE</th><th scope="col">ENTITY-JSON</th><th scope="col">MODIFICATION-DATE</th></tr>';
@@ -14,7 +14,7 @@ var xhr = new XMLHttpRequest();
 	     
 	    d.forEach((currentElement,index,arr) =>{
 		
-			console.log(currentElement);
+			console.log(currentElement.modificationDate);
 			var tr=document.createElement('tr');
 			var td1=document.createElement('td');
 			td1.innerHTML=currentElement.id;
@@ -23,10 +23,15 @@ var xhr = new XMLHttpRequest();
 			var td3=document.createElement('td');
 			td3.innerHTML=currentElement.entityJson;
 			var td4=document.createElement('td');
-			td4.innerHTML=currentElement.modificationDate;
-
+			var x=currentElement.modificationDate;
+			var date = new Date(x);//+ 'UTC');
+			date.toString();
 			
-			
+			//var x=currentElement.modificationDate.split('T');
+			//var x1=x[1].split('.');
+			//td4.innerHTML=x[0]+'  '+x1[0]+'  '+x1[1];
+			td4.innerHTML=date;
+		
 			tr.appendChild(td1);
 			tr.appendChild(td2);
 			tr.appendChild(td3);
