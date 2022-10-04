@@ -43,8 +43,9 @@
 						//td4.innerHTML=mobilePlans[i].modificationDate;
 						var x=mobilePlans[i].modificationDate;
 			            var date = new Date(x);
-			                date.toString();
-			                td4.innerHTML=date;
+			            x=date.toString();
+			            var x1=x.split(' ');
+			            td4.innerHTML=x1[0]+'  '+x1[1]+'  '+x1[2]+' '+x1[3]+'  '+x1[4]+' '+x1[5]+' IST';
 		
 				
 						tr.appendChild(td1);
