@@ -40,8 +40,12 @@
 						var td3=document.createElement('td');
 						td3.innerHTML=mobilePlans[i].entityJson;
 						var td4=document.createElement('td');
-						td4.innerHTML=mobilePlans[i].modificationDate;
-						
+						//td4.innerHTML=mobilePlans[i].modificationDate;
+						var x=mobilePlans[i].modificationDate;
+			            var date = new Date(x);
+			                date.toString();
+			                td4.innerHTML=date;
+		
 				
 						tr.appendChild(td1);
 						tr.appendChild(td2);
@@ -61,6 +65,10 @@
 				}
 				else
 				{
+					var tableHead=document.getElementById('table-head-view')
+					tableHead.innerHTML='';
+					var noData=document.getElementById('table-section-noData')
+					noData.innerHTML='<p align="center" style="color:black; align:center; font-weight:bolder">NO DATA PRESENT</p>';
 					alert("OPERATION-TYPE not present");
 				}
 					
