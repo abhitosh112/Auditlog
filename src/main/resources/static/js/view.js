@@ -62,7 +62,15 @@
 			
 		        if(flag == 1)
 		        {
-					alert("Data is fetched");
+					const swalWithBootstrapButtons = Swal.mixin({
+						customClass: {
+						  confirmButton: 'btn btn-success',
+						  cancelButton: 'btn btn-danger'
+							},
+						  buttonsStyling: false,
+						  allowOutsideClick:false
+					  });
+					swalWithBootstrapButtons.fire('Success!','Log searched.','success')
 				}
 				else
 				{
