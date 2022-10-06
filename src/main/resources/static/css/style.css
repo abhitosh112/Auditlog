@@ -630,6 +630,9 @@ form{
 .form-width{
   width: 400px;
 }
+.form-width1{
+  width: 300px;
+}
 
 .form-group{
   width: auto;
