@@ -6,6 +6,14 @@
 			var type =document.getElementById('optype').value;
 			type=type.toUpperCase();
 			
+			var dateInput=document.getElementById('dateId').value;
+			if(dateInput!=""){
+				var dateVar=new Date(dateInput);
+				//console.log(dateVar);
+				var date1=dateVar.getDate().toString() + dateVar.getMonth().toString() + dateVar.getFullYear().toString();
+			}
+			
+			
 			if(type.length!=0)
 			{
 				var xhr = new XMLHttpRequest();
@@ -29,7 +37,17 @@
 		  
 				for (var i = 0; i < mobilePlans.length; i++)
 				{
-					if(mobilePlans[i].operationType==type)
+					var dateVar1=new Date(mobilePlans[i].modificationDate);
+					var date2=dateVar1.getDate().toString() + dateVar1.getMonth().toString() + dateVar1.getFullYear().toString();
+					if(dateInput!="")
+					{
+						condition=(date1==date2);
+					}
+					else
+					{
+						condition=true;
+					}
+					if(mobilePlans[i].operationType==type && condition)
 					{
 						console.log(mobilePlans[i].operationType);
 						var tr=document.createElement('tr');
@@ -59,10 +77,7 @@
 						
 			  		}		
 	  			}
-			
-		        if(flag == 1)
-		        {
-					const swalWithBootstrapButtons = Swal.mixin({
+	  			const swalWithBootstrapButtons = Swal.mixin({
 						customClass: {
 						  confirmButton: 'btn btn-success',
 						  cancelButton: 'btn btn-danger'
@@ -70,6 +85,11 @@
 						  buttonsStyling: false,
 						  allowOutsideClick:false
 					  });
+			
+		        if(flag == 1)
+		        {
+					var noData=document.getElementById('table-section-noData')
+					noData.innerHTML='<p align="center" style="color:black; align:center; font-weight:bolder"></p>';
 					swalWithBootstrapButtons.fire('Success!','Log searched.','success')
 				}
 				else
@@ -78,7 +98,7 @@
 					tableHead.innerHTML='';
 					var noData=document.getElementById('table-section-noData')
 					noData.innerHTML='<p align="center" style="color:black; align:center; font-weight:bolder">NO DATA PRESENT</p>';
-					alert("OPERATION-TYPE not present");
+					swalWithBootstrapButtons.fire('Oops!','Log not available.','error')
 				}
 					
 				}
