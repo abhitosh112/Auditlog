@@ -93,7 +93,7 @@ h6, .h6 {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
-  padding: 13px 30px;
+  padding: 8px 30px;
   border-radius: 6px;
   border: 1px solid;
   position: relative;
@@ -212,8 +212,14 @@ a:hover {
   padding-bottom: 80px;
 }
 .section-sm {
-  padding-top: 50px;
-  padding-bottom: 50px;
+	min-height:76vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.section-sm1 {
+	min-height:85vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .section-title {
   margin-bottom: 40px;
@@ -779,6 +785,19 @@ form{
 .content tr:not(:last-child) {
   border-bottom: 1px solid #EEEEEE;
 }
+td
+{
+	vertical-align: middle;
+	font-size:14px
+}
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-size:14px;
+}
+
 .content th {
   font-weight: 500;
 }
